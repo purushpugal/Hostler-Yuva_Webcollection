@@ -1,0 +1,325 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #111;
+    background:#eaeaeb
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #2f3749;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: rgb(76, 147, 191);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #00adb5;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Background Video */
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Dark Overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+   background: linear-gradient(to bottom, #d0dae1, #222);
+    z-index: -1;
+}
+.tagline{
+    color: #0f0a06; 
+    font-size: 50px;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.hero-text h1 {
+    font-size: 50px;
+    margin: 10px 0;
+}
+
+.hero-text p {
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.hero-image img {
+    width: 350px;
+    border-radius: 10px;
+}
+
+/* Profile Image */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid white;
+}
+
+/* Buttons */
+.btn,
+.collections-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #e91e63;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover,
+.collections-btn:hover {
+    background: black;
+    transform: scale(1.1);
+}
+
+/* Sections */
+.section {
+    padding: 60px 50px;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 30px;
+}
+
+/* Skills */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background: #00adb5;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+/* Projects */
+.project-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: #f4f4f4;
+    padding: 20px;
+    margin: 15px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img {
+        margin-top: 20px;
+        width: 250px;
+    }
+
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* ===== MOBILE RESPONSIVE ===== */
+
+@media screen and (max-width: 768px) {
+
+body{
+flex-direction: column;
+}
+
+.sidebar{
+width: 100%;
+height: auto;
+position: relative;
+text-align: center;
+}
+
+.main-content{
+margin-left: 0;
+padding: 20px;
+width: 100%;
+}
+
+.products-container{
+justify-content: center;
+}
+
+.card{
+width: 90%;
+}
+
+}
+/* CONTACT SECTION */
+
+.contact-section{
+background:#111;
+padding:70px 20px;
+text-align:center;
+}
+
+.contact-title{
+color:white;
+font-size:30px;
+margin-bottom:40px;
+letter-spacing:1px;
+}
+
+/* Container */
+
+.contact-container{
+display:flex;
+justify-content:center;
+gap:35px;
+flex-wrap:wrap;
+}
+
+/* Buttons */
+
+.contact-btn{
+width:160px;
+height:70px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+color:white;
+font-size:18px;
+font-weight:600;
+border-radius:14px;
+transition:all 0.35s ease;
+position:relative;
+overflow:hidden;
+}
+
+/* Hover animation */
+
+.contact-btn:hover{
+transform:translateY(-8px) scale(1.05);
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* Shine animation */
+
+.contact-btn::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,0.3),
+transparent
+);
+transition:0.6s;
+}
+
+.contact-btn:hover::before{
+left:100%;
+}
+
+/* Colors */
+
+.whatsapp{
+background:linear-gradient(135deg,#25D366,#128C7E);
+}
+
+.linkedin{
+background:linear-gradient(135deg,#0A66C2,#004182);
+}
+
+.gmail{
+background:linear-gradient(135deg,#EA4335,#C5221F);
+}
+
+.hero{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bg-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content{
+    position: relative;
+    text-align: center;
+    color: white;
+}
